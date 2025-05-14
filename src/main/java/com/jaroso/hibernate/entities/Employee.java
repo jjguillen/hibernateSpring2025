@@ -26,4 +26,9 @@ public class Employee {
     @JoinColumn(name = "address_id", foreignKey = @ForeignKey(name = "Emp_Add_FK"))
     private Address address;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "company_id", foreignKey = @ForeignKey(name = "Emp_Cmp_FK"))
+    private Company company;
+
+
 }
